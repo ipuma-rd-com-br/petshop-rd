@@ -25,7 +25,7 @@
                     endereco: "Rua Um, 1",
                     idade: 39
                 },
-                vacinado: true,
+                vacinado: false,
                 servicos: ["Banho", "Corte de unhas"]
             },
             {
@@ -40,7 +40,7 @@
                     endereco: "Rua Um, 1",
                     idade: 39
                 },
-                vacinado: true,
+                vacinado: false,
                 servicos: ["Banho", "Corte de unhas"]
             },
             {
@@ -55,7 +55,7 @@
                     endereco: "Rua Um, 1",
                     idade: 39
                 },
-                vacinado: true,
+                vacinado: false,
                 servicos: ["Banho", "Tosa"]
             }
         ];
@@ -112,6 +112,13 @@
 
         // exemplo de arrow function
         const getEspecieENome = pet => pet.especie+" "+pet.nome;
+
+        // exemplo de array.filter()
+        let gatos = pets.filter(
+            function(pet) {
+                return pet.especie == "Felina";
+            }
+        );
 
     </script>
 
