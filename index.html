@@ -74,7 +74,7 @@
             } 
         }
 
-        function adicionarPet(nome, idade, especie, raca, peso, cor, dono, vacinado, servicos) {
+        function adicionarPet(nome, idade, especie, raca, peso, cor, vacinado, servicos) {
             pets.push(
                 {
                     nome: nome,
@@ -83,12 +83,28 @@
                     raca: raca,
                     peso: peso,
                     cor: cor,
-                    dono: null,
+                    dono: {
+                        nome: null,
+                        idade: null,
+                        endereco: null
+                    },
                     vacinado: vacinado,
                     servicos: servicos
                 }
             )
             console.log("Pet "+nome+" adicionado com sucesso!");
+        }
+
+        function listarPets() {
+            console.log("**************************************************");
+            console.log("* Lista dos Pets *********************************");
+            console.log("**************************************************");
+            for (var i = 0; i < pets.length; i++) {
+                console.log("Nome: "+pets[i].nome);
+                console.log("Espécie: "+pets[i].especie);
+                console.log(pets[i].vacinado ? "Pet está vacinado!" : "Pet ainda não foi vacinado!");
+                console.log("**************************************************");
+            }
         }
     </script>
 
