@@ -95,17 +95,29 @@
             console.log("Pet "+nome+" adicionado com sucesso!");
         }
 
-        function listarPets() {
+        const listarPets = function() { // exemplo de declaração de função expressa
             console.log("**************************************************");
             console.log("* Lista dos Pets *********************************");
             console.log("**************************************************");
-            for (var i = 0; i < pets.length; i++) {
-                console.log("Nome: "+pets[i].nome);
-                console.log("Espécie: "+pets[i].especie);
-                console.log(pets[i].vacinado ? "Pet está vacinado!" : "Pet ainda não foi vacinado!");
-                console.log("**************************************************");
-            }
+            // for (var i = 0; i < pets.length; i++) {
+            //     console.log("Nome: "+pets[i].nome);
+            //     console.log("Espécie: "+pets[i].especie);
+            //     console.log(pets[i].vacinado ? "Pet está vacinado!" : "Pet ainda não foi vacinado!");
+            //     console.log("**************************************************");
+            // }
+            pets.forEach(
+                function(pet) {
+                    console.log("Nome: "+pet.nome);
+                    console.log("Espécie: "+pet.especie);
+                    console.log(pet.vacinado ? "Pet está vacinado!" : "Pet ainda não foi vacinado!");
+                    console.log("**************************************************");
+                }
+            )
         }
+
+        // exemplo de arrow function
+        const getEspecieENome = pet => pet.especie+" "+pet.nome;
+
     </script>
 
 </body>
