@@ -22,7 +22,8 @@
                 cor: "Abricot",
                 dono: {
                     nome: "Ivo",
-                    endereco: "Rua Um, 1"
+                    endereco: "Rua Um, 1",
+                    idade: 39
                 },
                 vacinado: true,
                 servicos: ["Banho", "Corte de unhas"]
@@ -36,7 +37,8 @@
                 cor: "Abricot",
                 dono: {
                     nome: "Ivo",
-                    endereco: "Rua Um, 1"
+                    endereco: "Rua Um, 1",
+                    idade: 39
                 },
                 vacinado: true,
                 servicos: ["Banho", "Corte de unhas"]
@@ -50,12 +52,13 @@
                 cor: "Preta",
                 dono: {
                     nome: "Ivo",
-                    endereco: "Rua Um, 1"
+                    endereco: "Rua Um, 1",
+                    idade: 39
                 },
                 vacinado: true,
                 servicos: ["Banho", "Tosa"]
             }
-        ]
+        ];
 
         function vacinar(pet) {
             if (pet != null) {
@@ -69,6 +72,23 @@
             } else {
                 console.log("Pet está nulo.");
             } 
+        }
+
+        function adicionarPet(nome, idade, especia, raca, peso, cor, dono, vacinado, servicos) {
+            pets.push(
+                {
+                    nome: nome,
+                    idade: idade,
+                    especie: especie,
+                    raca: raca,
+                    peso: peso,
+                    cor: cor,
+                    dono: null,
+                    vacinado: vacinado,
+                    servicos: servicos
+                }
+            )
+            console.log("Pet "+nome+" adicionado com sucesso!");
         }
     </script>
 
