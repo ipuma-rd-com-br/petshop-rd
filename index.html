@@ -12,30 +12,62 @@
         /*
             nome, idade, raca, peso, cor, dono, vacinado, serviços
         */
-        var cachorro = {
-            nome: "Johnny",
-            idade: 6,
-            raca: "Pug",
-            peso: 11.0,
-            cor: "Abricot",
-            dono: {
-                nome: "Ivo",
-                endereco: "Rua Um, 1"
+        var pets = [
+            {
+                nome: "Johnny",
+                idade: 6,
+                especie: "Canina",
+                raca: "Pug",
+                peso: 11.0,
+                cor: "Abricot",
+                dono: {
+                    nome: "Ivo",
+                    endereco: "Rua Um, 1"
+                },
+                vacinado: true,
+                servicos: ["Banho", "Corte de unhas"]
             },
-            vacinado: true,
-            servicos: ["Banho", "Corte de unhas"]
-        }
+            {
+                nome: "Murphy",
+                idade: 10,
+                especie: "Canina",
+                raca: "Pug",
+                peso: 13.0,
+                cor: "Abricot",
+                dono: {
+                    nome: "Ivo",
+                    endereco: "Rua Um, 1"
+                },
+                vacinado: true,
+                servicos: ["Banho", "Corte de unhas"]
+            },
+            {
+                nome: "Taz",
+                idade: 15,
+                especie: "Felina",
+                raca: "SRD",
+                peso: 4.0,
+                cor: "Preta",
+                dono: {
+                    nome: "Ivo",
+                    endereco: "Rua Um, 1"
+                },
+                vacinado: true,
+                servicos: ["Banho", "Tosa"]
+            }
+        ]
 
-        function vacinar(cachorro) {
-            if (cachorro != null) {
-                if (!cachorro.vacinado) {
-                    cachorro.vacinado = true;
+        function vacinar(pet) {
+            if (pet != null) {
+                if (!pet.vacinado) {
+                    pet.vacinado = true;
+                    console.log("Vacina aplicada com sucesso!");
                 }
                 else {
-                    console.log("Cachorro já está vacinado!");
+                    console.log("Pet já está vacinado!");
                 }
             } else {
-                console.log("Cachorro está nulo.");
+                console.log("Pet está nulo.");
             } 
         }
     </script>
