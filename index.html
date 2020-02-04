@@ -120,6 +120,19 @@
             }
         );
 
+        // exemplo de array.map()
+        const vacinarTodosOsPets = () => {
+            let petsVacinados = pets.map(
+                function(pet) {
+                    vacinar(pet);
+                    return pet;
+                }
+            );
+            pets = petsVacinados;
+            console.log("Todos os pets foram vacinados!");
+        }
+        
+
     </script>
 
 </body>
