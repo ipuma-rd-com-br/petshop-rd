@@ -12,7 +12,7 @@
         /*
             nome, idade, raca, peso, cor, dono, vacinado, serviços
         */
-        var pets = [
+        let pets = [
             {
                 nome: "Johnny",
                 idade: 6,
@@ -60,7 +60,7 @@
             }
         ];
 
-        function vacinar(pet) {
+        const vacinar = pet => {
             if (pet != null) {
                 if (!pet.vacinado) {
                     pet.vacinado = true;
@@ -74,37 +74,32 @@
             } 
         }
 
-        function adicionarPet(nome, idade, especie, raca, peso, cor, vacinado, servicos) {
-            pets.push(
-                {
-                    nome: nome,
-                    idade: idade,
-                    especie: especie,
-                    raca: raca,
-                    peso: peso,
-                    cor: cor,
-                    dono: {
-                        nome: null,
-                        idade: null,
-                        endereco: null
-                    },
-                    vacinado: vacinado,
-                    servicos: servicos
-                }
-            )
-            console.log("Pet "+nome+" adicionado com sucesso!");
-        }
+        const adicionarPet = 
+            (nome, idade, especie, raca, peso, cor, vacinado, servicos) => {
+                pets.push(
+                    {
+                        nome,
+                        idade,
+                        especie,
+                        raca,
+                        peso,
+                        cor,
+                        dono: {
+                            nome: null,
+                            idade: null,
+                            endereco: null
+                        },
+                        vacinado,
+                        servicos
+                    }
+                )
+                console.log("Pet "+nome+" adicionado com sucesso!");
+            }
 
-        const listarPets = function() { // exemplo de declaração de função expressa
+        const listarPets = () => {
             console.log("**************************************************");
             console.log("* Lista dos Pets *********************************");
             console.log("**************************************************");
-            // for (var i = 0; i < pets.length; i++) {
-            //     console.log("Nome: "+pets[i].nome);
-            //     console.log("Espécie: "+pets[i].especie);
-            //     console.log(pets[i].vacinado ? "Pet está vacinado!" : "Pet ainda não foi vacinado!");
-            //     console.log("**************************************************");
-            // }
             pets.forEach(
                 function(pet) {
                     console.log("Nome: "+pet.nome);
